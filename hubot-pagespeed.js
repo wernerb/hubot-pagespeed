@@ -95,23 +95,26 @@
         psi(options, function(err, data) {
 		var output;
 		output = [
-		      '/quote ',
+		      '```',
 		      divider,
-		      generateScore(data.id, strategy, data.score)
+		      generateScore(data.id, strategy, data.score),
+		      '```',
 		].join('\n');
 		msg.send(output);
 
 		output = [
-		      '/quote ',
+		      '```',
 		      divider,
-		      generateStatistics(data.pageStats)
+		      generateStatistics(data.pageStats),
+		      '```',
 		].join('\n');
 		msg.send(output);
 
 		output = [
-		      '/quote ',
+		      '```',
 		      divider,
-		      generateRuleSetResults(data.formattedResults.ruleResults)
+		      generateRuleSetResults(data.formattedResults.ruleResults),
+		      '```',
 		].join('\n');
 		msg.send(output);
 	});
